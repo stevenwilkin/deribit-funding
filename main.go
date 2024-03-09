@@ -40,10 +40,6 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 }
 
 func (m model) View() string {
-	if m.funding == 0 {
-		return ""
-	}
-
 	return margin.Render(fmt.Sprintf("%f%%", m.funding*100))
 }
 
